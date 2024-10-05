@@ -318,10 +318,33 @@ class Runner:
                 result_id = child.expect(password_patterns, timeout=self.config.pexpect_timeout, searchwindowsize=100)
                 password = password_values[result_id]
                 if password is not None:
-                    if str(password_patterns[result_id]).find('SSH') != -1:
-                        child.sendline('\r\n')
-
                     child.sendline(password)
+
+                    pattern = str(password_patterns[result_id])
+                    if pattern.find('SSH password:') != -1 or pattern.find('SSH Password:') != -1:
+                        become = False
+                        become_idx = 0
+                        vault = False
+                        vault_idx = 0
+
+                        for i, p in enumerate(password_patterns):
+                            if str(p).find('BECOME') != -1:
+                                become = True
+                                become_idx = i
+
+                            elif str(p).find('Vault') != -1:
+                                vault = True
+                                vault_idx = i
+
+                        if become:
+                            child.sendline(password_values[become_idx])
+
+                        elif vault:
+                            child.sendline(password_values[vault_idx])
+
+                        else:
+                            child.sendline()
+
                     self.last_stdout_update = time.time()
                 if self.cancel_callback:
                     try:
