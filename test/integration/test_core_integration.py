@@ -1,7 +1,7 @@
 import sys
 import pytest
 
-from ansible_runner.interface import run
+from ansibleguy_runner.interface import run
 
 
 TEST_BRANCHES = (

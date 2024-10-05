@@ -264,7 +264,7 @@ Usage examples
 
 .. code-block:: python
 
-  from ansible_runner import Runner, RunnerConfig
+  from ansibleguy_runner import Runner, RunnerConfig
 
   # Using tag using RunnerConfig
   rc = RunnerConfig(

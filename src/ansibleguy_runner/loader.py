@@ -26,8 +26,8 @@ import codecs
 from typing import Any, Dict
 from yaml import safe_load, YAMLError
 
-from ansible_runner.exceptions import ConfigurationError
-from ansible_runner.output import debug
+from ansibleguy_runner.exceptions import ConfigurationError
+from ansibleguy_runner.output import debug
 
 
 class ArtifactLoader:

@@ -6,7 +6,7 @@ from test.utils.common import iterate_timeout
 import pytest
 import yaml
 
-from ansible_runner.__main__ import main
+from ansibleguy_runner.__main__ import main
 
 
 @pytest.mark.parametrize(

@@ -6,7 +6,7 @@ import yaml
 
 import pytest
 
-from ansible_runner.interface import init_runner
+from ansibleguy_runner.interface import init_runner
 
 
 HERE = os.path.abspath(os.path.dirname(__file__))

@@ -1,7 +1,7 @@
 import json
 import pytest
 
-from ansible_runner import run, run_async
+from ansibleguy_runner import run, run_async
 
 
 @pytest.mark.test_all_runtimes

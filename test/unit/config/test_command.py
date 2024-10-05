@@ -3,9 +3,9 @@
 import os
 import pytest
 
-from ansible_runner.config.command import CommandConfig
-from ansible_runner.config._base import BaseExecutionMode
-from ansible_runner.exceptions import ConfigurationError
+from ansibleguy_runner.config.command import CommandConfig
+from ansibleguy_runner.config._base import BaseExecutionMode
+from ansibleguy_runner.exceptions import ConfigurationError
 
 
 def test_ansible_config_defaults(tmp_path, patch_private_data_dir):

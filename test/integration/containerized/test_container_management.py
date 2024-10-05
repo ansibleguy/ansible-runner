@@ -7,7 +7,7 @@ from uuid import uuid4
 
 import pytest
 
-from ansible_runner.interface import run
+from ansibleguy_runner.interface import run
 
 
 @pytest.mark.test_all_runtimes

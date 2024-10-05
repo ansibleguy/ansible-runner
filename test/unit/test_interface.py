@@ -1,6 +1,6 @@
 import pytest
 
-from ansible_runner.interface import init_runner
+from ansibleguy_runner.interface import init_runner
 
 
 def test_default_callback_set(mocker):

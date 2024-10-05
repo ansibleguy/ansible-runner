@@ -1,4 +1,4 @@
-from ansible_runner.__main__ import valid_inventory
+from ansibleguy_runner.__main__ import valid_inventory
 
 
 def test_valid_inventory_file_in_inventory(tmp_path):

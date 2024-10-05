@@ -41,15 +41,15 @@ import daemon
 from daemon.pidfile import TimeoutPIDLockFile
 from yaml import safe_dump, safe_load
 
-from ansible_runner import run
-from ansible_runner import output
-from ansible_runner import cleanup
-from ansible_runner.utils import dump_artifact, Bunch, register_for_cleanup
-from ansible_runner.utils.capacity import get_cpu_count, get_mem_in_bytes, ensure_uuid
-from ansible_runner.utils.importlib_compat import importlib_metadata
-from ansible_runner.runner import Runner
+from ansibleguy_runner import run
+from ansibleguy_runner import output
+from ansibleguy_runner import cleanup
+from ansibleguy_runner.utils import dump_artifact, Bunch, register_for_cleanup
+from ansibleguy_runner.utils.capacity import get_cpu_count, get_mem_in_bytes, ensure_uuid
+from ansibleguy_runner.utils.importlib_compat import importlib_metadata
+from ansibleguy_runner.runner import Runner
 
-VERSION = importlib_metadata.version("ansible_runner")
+VERSION = importlib_metadata.version("ansibleguy_runner")
 
 DEFAULT_ROLES_PATH = os.getenv('ANSIBLE_ROLES_PATH', None)
 DEFAULT_RUNNER_BINARY = os.getenv('RUNNER_BINARY', None)

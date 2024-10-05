@@ -26,7 +26,7 @@ from collections.abc import Callable, Iterable, MutableMapping
 from io import StringIO
 from typing import Any, Iterator
 
-from ansible_runner.exceptions import ConfigurationError
+from ansibleguy_runner.exceptions import ConfigurationError
 
 
 def cleanup_folder(folder: str) -> bool:

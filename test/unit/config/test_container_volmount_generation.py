@@ -8,8 +8,8 @@ from typing import NamedTuple
 
 import pytest
 
-from ansible_runner.config._base import BaseConfig
-from ansible_runner.exceptions import ConfigurationError
+from ansibleguy_runner.config._base import BaseConfig
+from ansibleguy_runner.exceptions import ConfigurationError
 
 
 class Variation(NamedTuple):

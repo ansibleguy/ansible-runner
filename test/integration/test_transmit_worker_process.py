@@ -9,8 +9,8 @@ import threading
 
 import pytest
 
-from ansible_runner import run
-from ansible_runner.streaming import Transmitter, Worker, Processor
+from ansibleguy_runner import run
+from ansibleguy_runner.streaming import Transmitter, Worker, Processor
 
 import ansible_runner.interface  # AWX import pattern
 

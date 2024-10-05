@@ -14,8 +14,8 @@ import traceback
 
 import pexpect
 
-import ansible_runner.plugins
-from ansible_runner.output import debug
+import ansibleguy_runner.plugins
+from ansibleguy_runner.output import debug
 
 from .utils import OutputEventFilter, cleanup_artifact_dir, ensure_str, collect_new_events
 from .exceptions import CallbackError, AnsibleRunnerException
@@ -88,8 +88,8 @@ class Runner:
                     should_write = self.event_handler(event_data)
                 else:
                     should_write = True
-                for plugin in ansible_runner.plugins:
-                    ansible_runner.plugins[plugin].event_handler(self.config, event_data)
+                for plugin in ansibleguy_runner.plugins:
+                    ansibleguy_runner.plugins[plugin].event_handler(self.config, event_data)
                 if should_write:
                     temporary_filename = full_filename + '.tmp'
                     with codecs.open(temporary_filename, 'w', encoding='utf-8') as write_file:
@@ -104,8 +104,8 @@ class Runner:
         status_data = {'status': status, 'runner_ident': str(self.config.ident)}
         if status == 'starting':
             status_data.update({'command': self.config.command, 'env': self.config.env, 'cwd': self.config.cwd})
-        for plugin in ansible_runner.plugins:
-            ansible_runner.plugins[plugin].status_handler(self.config, status_data)
+        for plugin in ansibleguy_runner.plugins:
+            ansibleguy_runner.plugins[plugin].status_handler(self.config, status_data)
         if self.status_handler is not None:
             self.status_handler(status_data, runner_config=self.config)
 

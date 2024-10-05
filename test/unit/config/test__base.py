@@ -9,9 +9,9 @@ from test.utils.common import RSAKey
 import pytest
 from pexpect import TIMEOUT, EOF
 
-from ansible_runner.config._base import BaseConfig, BaseExecutionMode
-from ansible_runner.loader import ArtifactLoader
-from ansible_runner.exceptions import ConfigurationError
+from ansibleguy_runner.config._base import BaseConfig, BaseExecutionMode
+from ansibleguy_runner.loader import ArtifactLoader
+from ansibleguy_runner.exceptions import ConfigurationError
 
 
 def load_file_side_effect(path, value, *args, **kwargs):

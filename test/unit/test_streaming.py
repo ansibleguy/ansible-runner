@@ -1,6 +1,6 @@
 import os
 
-from ansible_runner.streaming import Processor
+from ansibleguy_runner.streaming import Processor
 
 
 class TestProcessor:

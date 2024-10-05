@@ -22,8 +22,8 @@
 import logging
 import os
 
-from ansible_runner.config._base import BaseConfig, BaseExecutionMode
-from ansible_runner.exceptions import ConfigurationError
+from ansibleguy_runner.config._base import BaseConfig, BaseExecutionMode
+from ansibleguy_runner.exceptions import ConfigurationError
 
 logger = logging.getLogger('ansible-runner')
 

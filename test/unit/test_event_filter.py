@@ -7,7 +7,7 @@ from pprint import pprint
 
 import pytest
 
-from ansible_runner.utils import OutputEventFilter
+from ansibleguy_runner.utils import OutputEventFilter
 
 MAX_WIDTH = 78
 EXAMPLE_UUID = '890773f5-fe6d-4091-8faf-bdc8021d65dd'

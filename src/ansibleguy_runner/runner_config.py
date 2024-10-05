@@ -19,4 +19,4 @@
 
 # pylint: disable=W0401,W0614
 # to maintain backward compatibility
-from ansible_runner.config.runner import *  # noqa
+from ansibleguy_runner.config.runner import *  # noqa

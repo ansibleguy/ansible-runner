@@ -1,7 +1,7 @@
 import os
 
-from ansible_runner.config._base import BaseConfig
-from ansible_runner.interface import run
+from ansibleguy_runner.config._base import BaseConfig
+from ansibleguy_runner.interface import run
 
 
 def test_combine_python_and_file_settings(project_fixtures):

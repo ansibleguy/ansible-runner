@@ -3,7 +3,7 @@ import shutil
 
 import pytest
 
-from ansible_runner.interface import (
+from ansibleguy_runner.interface import (
     get_ansible_config,
     get_inventory,
     get_plugin_docs,

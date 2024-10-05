@@ -27,11 +27,11 @@ import stat
 import tempfile
 import shutil
 
-from ansible_runner import output
-from ansible_runner.config._base import BaseConfig, BaseExecutionMode
-from ansible_runner.exceptions import ConfigurationError
-from ansible_runner.output import debug
-from ansible_runner.utils import register_for_cleanup
+from ansibleguy_runner import output
+from ansibleguy_runner.config._base import BaseConfig, BaseExecutionMode
+from ansibleguy_runner.exceptions import ConfigurationError
+from ansibleguy_runner.output import debug
+from ansibleguy_runner.utils import register_for_cleanup
 
 
 logger = logging.getLogger('ansible-runner')

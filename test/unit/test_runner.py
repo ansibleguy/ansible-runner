@@ -14,9 +14,9 @@ from test.utils.common import iterate_timeout
 import pexpect
 import pytest
 
-from ansible_runner import Runner
-from ansible_runner.exceptions import CallbackError, AnsibleRunnerException
-from ansible_runner.config.runner import RunnerConfig
+from ansibleguy_runner import Runner
+from ansibleguy_runner.exceptions import CallbackError, AnsibleRunnerException
+from ansibleguy_runner.config.runner import RunnerConfig
 
 
 @pytest.fixture(scope='function')

@@ -36,12 +36,12 @@ from typing import Any
 
 import pexpect
 
-from ansible_runner import defaults
-from ansible_runner.output import debug
-from ansible_runner.exceptions import ConfigurationError
-from ansible_runner.defaults import registry_auth_prefix
-from ansible_runner.loader import ArtifactLoader
-from ansible_runner.utils import (
+from ansibleguy_runner import defaults
+from ansibleguy_runner.output import debug
+from ansibleguy_runner.exceptions import ConfigurationError
+from ansibleguy_runner.defaults import registry_auth_prefix
+from ansibleguy_runner.loader import ArtifactLoader
+from ansibleguy_runner.utils import (
     get_callback_dir,
     open_fifo_write,
     args2cmdline,

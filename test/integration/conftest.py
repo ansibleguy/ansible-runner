@@ -10,7 +10,7 @@ import pexpect
 import pytest
 import yaml
 
-from ansible_runner.config.runner import RunnerConfig
+from ansibleguy_runner.config.runner import RunnerConfig
 
 here = pathlib.Path(__file__).parent
 

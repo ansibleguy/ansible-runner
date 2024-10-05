@@ -6,7 +6,7 @@ from pytest import raises, fixture
 
 import ansible_runner.loader
 
-from ansible_runner.exceptions import ConfigurationError
+from ansibleguy_runner.exceptions import ConfigurationError
 
 
 @fixture

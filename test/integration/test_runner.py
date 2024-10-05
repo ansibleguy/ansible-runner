@@ -10,8 +10,8 @@ from test.utils.common import iterate_timeout
 
 import pytest
 
-from ansible_runner import Runner, run
-from ansible_runner.exceptions import AnsibleRunnerException
+from ansibleguy_runner import Runner, run
+from ansibleguy_runner.exceptions import AnsibleRunnerException
 
 
 @pytest.mark.xfail(reason='Test is unstable')

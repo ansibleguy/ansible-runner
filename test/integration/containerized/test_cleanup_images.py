@@ -6,7 +6,7 @@ from string import ascii_lowercase
 
 import pytest
 
-from ansible_runner.cleanup import cleanup_images, prune_images
+from ansibleguy_runner.cleanup import cleanup_images, prune_images
 
 
 @pytest.mark.test_all_runtimes

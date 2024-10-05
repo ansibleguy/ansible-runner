@@ -1,4 +1,4 @@
-from ansible_runner.utils import cleanup_folder
+from ansibleguy_runner.utils import cleanup_folder
 
 
 def test_cleanup_folder(tmp_path):

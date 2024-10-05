@@ -13,12 +13,12 @@ from collections.abc import Mapping
 from functools import wraps
 from threading import Event, RLock, Thread
 
-import ansible_runner
-from ansible_runner.exceptions import ConfigurationError
-from ansible_runner.loader import ArtifactLoader
-import ansible_runner.plugins
-from ansible_runner.utils import register_for_cleanup
-from ansible_runner.utils.streaming import stream_dir, unstream_dir
+import ansibleguy_runner
+from ansibleguy_runner.exceptions import ConfigurationError
+from ansibleguy_runner.loader import ArtifactLoader
+import ansibleguy_runner.plugins
+from ansibleguy_runner.utils import register_for_cleanup
+from ansibleguy_runner.utils.streaming import stream_dir, unstream_dir
 
 
 class UUIDEncoder(json.JSONEncoder):
@@ -212,7 +212,7 @@ class Worker:
             self.kwargs['artifacts_handler'] = self.artifacts_handler
             self.kwargs['finished_callback'] = self.finished_callback
 
-            r = ansible_runner.interface.run(**self.kwargs)
+            r = ansibleguy_runner.interface.run(**self.kwargs)
             self.status, self.rc = r.status, r.rc
 
             # FIXME: do cleanup on the tempdir
@@ -298,8 +298,8 @@ class Processor:
             self.config.env = status_data.get('env')
             self.config.cwd = status_data.get('cwd')
 
-        for plugin in ansible_runner.plugins:
-            ansible_runner.plugins[plugin].status_handler(self.config, status_data)
+        for plugin in ansibleguy_runner.plugins:
+            ansibleguy_runner.plugins[plugin].status_handler(self.config, status_data)
         if self.status_handler is not None:
             self.status_handler(status_data, runner_config=self.config)
 
@@ -323,8 +323,8 @@ class Processor:
             should_write = self.event_handler(event_data)
         else:
             should_write = True
-        for plugin in ansible_runner.plugins:
-            ansible_runner.plugins[plugin].event_handler(self.config, event_data)
+        for plugin in ansibleguy_runner.plugins:
+            ansibleguy_runner.plugins[plugin].event_handler(self.config, event_data)
         if should_write:
             with codecs.open(full_filename, 'w', encoding='utf-8') as write_file:
                 os.chmod(full_filename, stat.S_IRUSR | stat.S_IWUSR)

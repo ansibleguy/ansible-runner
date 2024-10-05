@@ -3,10 +3,10 @@
 import os
 import pytest
 
-from ansible_runner.config.inventory import InventoryConfig
-from ansible_runner.config._base import BaseExecutionMode
-from ansible_runner.exceptions import ConfigurationError
-from ansible_runner.utils import get_executable_path
+from ansibleguy_runner.config.inventory import InventoryConfig
+from ansibleguy_runner.config._base import BaseExecutionMode
+from ansibleguy_runner.exceptions import ConfigurationError
+from ansibleguy_runner.utils import get_executable_path
 
 
 def test_ansible_inventory_init_defaults(tmp_path, patch_private_data_dir):

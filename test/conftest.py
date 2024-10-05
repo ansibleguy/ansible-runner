@@ -7,8 +7,8 @@ from packaging.version import Version
 
 import pytest
 
-from ansible_runner import defaults
-from ansible_runner.utils.importlib_compat import importlib_metadata
+from ansibleguy_runner import defaults
+from ansibleguy_runner.utils.importlib_compat import importlib_metadata
 
 
 CONTAINER_RUNTIMES = (

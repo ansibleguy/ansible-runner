@@ -12,7 +12,7 @@ from pathlib import Path
 
 import pytest
 
-from ansible_runner.utils import (
+from ansibleguy_runner.utils import (
     isplaybook,
     isinventory,
     check_isolation_executable_installed,
@@ -20,8 +20,8 @@ from ansible_runner.utils import (
     sanitize_container_name,
     signal_handler,
 )
-from ansible_runner.utils.base64io import _to_bytes, Base64IO
-from ansible_runner.utils.streaming import stream_dir, unstream_dir
+from ansibleguy_runner.utils.base64io import _to_bytes, Base64IO
+from ansibleguy_runner.utils.streaming import stream_dir, unstream_dir
 
 
 @pytest.mark.parametrize('playbook', ('foo', {}, {'foo': 'bar'}, True, False, None))

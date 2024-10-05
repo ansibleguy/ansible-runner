@@ -12,5 +12,5 @@ from .runner import Runner # noqa
 plugins = {
     entry_point.name: entry_point.load()
     for entry_point
-    in importlib_metadata.entry_points(group='ansible_runner.plugins')
+    in importlib_metadata.entry_points(group='ansibleguy_runner.plugins')
 }

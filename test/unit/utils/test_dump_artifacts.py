@@ -1,6 +1,6 @@
 import pytest
 
-from ansible_runner.utils import dump_artifacts
+from ansibleguy_runner.utils import dump_artifacts
 
 
 def test_dump_artifacts_private_data_dir_does_not_exists():

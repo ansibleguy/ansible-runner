@@ -2,7 +2,7 @@
 
 import pytest
 
-from ansible_runner.utils.capacity import (
+from ansibleguy_runner.utils.capacity import (
     _set_uuid,
     ensure_uuid,
 )

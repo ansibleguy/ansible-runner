@@ -5,8 +5,8 @@ import time
 
 import pytest
 
-from ansible_runner.cleanup import cleanup_dirs, validate_pattern
-from ansible_runner.config.runner import RunnerConfig
+from ansibleguy_runner.cleanup import cleanup_dirs, validate_pattern
+from ansibleguy_runner.config.runner import RunnerConfig
 
 
 def test_simple_dir_cleanup_with_exclusions(tmp_path):
