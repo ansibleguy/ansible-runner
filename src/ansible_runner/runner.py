@@ -318,6 +318,9 @@ class Runner:
                 result_id = child.expect(password_patterns, timeout=self.config.pexpect_timeout, searchwindowsize=100)
                 password = password_values[result_id]
                 if password is not None:
+                    if str(password_patterns[result_id]).find('SSH') != -1:
+                        child.sendline('\r\n')
+
                     child.sendline(password)
                     self.last_stdout_update = time.time()
                 if self.cancel_callback:
