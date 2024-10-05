@@ -9,13 +9,13 @@ authors = [
 ]
 description = "Ansible Runner Fork"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 keywords = ["ansible", "runner", "automation", "iac"]
 license = {file = "LICENSE.txt"}
 classifiers = [
     'Programming Language :: Python :: 3',
 ]
-dynamic = ["version"]
+dynamic = ["dependencies", "version"]
 
 [project.urls]
 Homepage = "https://github.com/ansibleguy/ansible-runner"
@@ -23,6 +23,7 @@ Repository = "https://github.com/ansibleguy/ansible-runner.git"
 Issues = "https://github.com/ansibleguy/issues"
 
 [tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
 version = {file = ["VERSION"]}
 
 [tool.setuptools.packages.find]
