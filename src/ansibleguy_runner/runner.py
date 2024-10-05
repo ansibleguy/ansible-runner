@@ -321,18 +321,18 @@ class Runner:
                     child.sendline(password)
 
                     pattern = str(password_patterns[result_id])
-                    if pattern.find('SSH password:') != -1 or pattern.find('SSH Password:') != -1:
+                    if pattern.find('^SSH') != -1:
                         become = False
                         become_idx = 0
                         vault = False
                         vault_idx = 0
 
                         for i, p in enumerate(password_patterns):
-                            if str(p).find('BECOME') != -1:
+                            if str(p).find('^BECOME') != -1:
                                 become = True
                                 become_idx = i
 
-                            elif str(p).find('Vault') != -1:
+                            elif str(p).find('^Vault') != -1:
                                 vault = True
                                 vault_idx = i
 
